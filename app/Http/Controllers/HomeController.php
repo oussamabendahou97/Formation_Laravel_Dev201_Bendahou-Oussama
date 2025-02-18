@@ -16,9 +16,6 @@ class HomeController extends Controller
             2 => ['title' => 'react']
         ];
     
-        if (!array_key_exists($id, $posts)) {
-            abort(404); // Retourne une erreur 404 si l’ID n’existe pas
-        }
     
         return view('posts.show', ['data' => $posts[$id]]);
     }
